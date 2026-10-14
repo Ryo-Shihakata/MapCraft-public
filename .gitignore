@@ -1,0 +1,20 @@
+node_modules/
+dist/
+.wrangler/
+.env
+.env.local
+.dev.vars
+*.tsbuildinfo
+
+# Claude Code — personal/local overrides (shared settings.json is committed)
+.claude/settings.local.json
+
+# Claude subagent worktrees
+.claude/worktrees/
+
+# M1 記号ギャラリー（生成物）
+packages/shared/symbol-gallery.html
+
+# Playwright artifacts
+test-results/
+playwright-report/

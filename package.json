@@ -1,0 +1,21 @@
+{
+  "name": "mapcraft",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel --filter=./apps/* dev",
+    "build": "pnpm --filter=./packages/* build && pnpm --filter=./apps/* build",
+    "type-check": "pnpm --recursive type-check",
+    "test": "vitest run",
+    "check": "pnpm type-check && pnpm test",
+    "e2e": "playwright test",
+    "e2e:perf": "node scripts/perf-measure.mjs",
+    "db:generate": "pnpm --filter @mapcraft/worker db:generate",
+    "db:migrate:local": "pnpm --filter @mapcraft/worker db:migrate:local",
+    "db:migrate:remote": "pnpm --filter @mapcraft/worker db:migrate:remote"
+  },
+  "devDependencies": {
+    "playwright": "^1.57.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.9"
+  }
+}

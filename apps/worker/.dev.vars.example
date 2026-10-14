@@ -1,0 +1,8 @@
+# apps/worker/.dev.vars のテンプレート（§5）。コピーして値を埋める。
+# BETTER_AUTH_SECRET は `openssl rand -base64 32` などで生成する。
+BETTER_AUTH_SECRET=replace-with-random-32-bytes-base64
+BETTER_AUTH_URL=http://localhost:8787
+GOOGLE_CLIENT_ID=placeholder
+GOOGLE_CLIENT_SECRET=placeholder
+# ローカル/E2E のみ。本番には絶対に設定しない（§M10）
+E2E_TEST_MODE=1
